@@ -1,0 +1,8 @@
+FROM UBUNTU
+RUN apt update -y && apt install doxygen -y
+
+ADD config /input
+
+WORKDIR /input
+
+ENTRYPOINT doxygen config 
